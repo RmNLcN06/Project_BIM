@@ -22,11 +22,7 @@
 header {
   width: 100%;
   height: 800px;
-  background-image: linear-gradient(
-    to bottom right,
-    var(--clr-pink-one),
-    var(--clr-blue-two)
-  );
+  background-image: linear-gradient(to bottom right, var(--clr-pink-one), var(--clr-blue-two));
   color: var(--font-clr-two);
 }
 
