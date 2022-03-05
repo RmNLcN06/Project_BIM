@@ -17,23 +17,46 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-family);
-}
-
-header {
-  width: 100%;
-  height: 800px;
-  background-image: linear-gradient(to bottom right, var(--clr-pink-one), var(--clr-blue-two));
-  color: var(--font-clr-two);
-}
-
-header a {
+  list-style-type: none;
   text-decoration: none;
   color: var(--font-clr-two);
 }
 
+.header {
+  width: 100%;
+  height: 800px;
+  background-image: linear-gradient(to bottom right, var(--clr-pink-one), var(--clr-blue-two));
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.header__top {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 80%;
+}
+.header__center {
+  margin-top: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.header__center__title, .header__center__subtitle {
+  margin-bottom: 30px;
+}
+.header__center__cta {
+  text-transform: uppercase;
+  background-color: var(--clr-cta);
+  padding: 15px 30px;
+  border-radius: 24px;
+}
+
 /* Menu Button*/
 .header__top__menu {
-  display: inline-block;
+  display: none;
   cursor: pointer;
 }
 
@@ -60,5 +83,85 @@ header a {
   -webkit-transform: rotate(-45deg) translate(8px, -8px);
   transform: rotate(-45deg) translate(8px, -8px);
 }
+
+/* Pop-up Test */
+.navigation__link,
+.navigation__link--active,
+.navigation__link--dropdown {
+  margin-left: 30px;
+}
+
+.navigation__link--dropdown {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* The actual popup */
+.navigation__link--dropdown .navigation__link--dropdown--sublink {
+  visibility: hidden;
+  width: 140px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 8px 0;
+  position: absolute;
+  z-index: 1;
+  top: 160%;
+  left: 70%;
+  margin-left: -80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.navigation__link--dropdown .navigation__link--dropdown--sublink li {
+  margin: 5px;
+}
+
+/* Popup arrow */
+.navigation__link--dropdown .navigation__link--dropdown--sublink::before {
+  content: "";
+  position: absolute;
+  top: -8%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+  transform: rotate(180deg);
+}
+
+/* Toggle this class - hide and show the popup */
+.navigation__link--dropdown .show {
+  visibility: visible;
+  -webkit-animation: fadeIn 1s;
+  animation: fadeIn 1s;
+}
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* Pop-up Test */
 
 /*# sourceMappingURL=style.css.map */

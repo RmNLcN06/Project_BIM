@@ -1,0 +1,19 @@
+{
+  "name": "project_bim",
+  "version": "1.0.0",
+  "description": "Projet de site web multipages et responsive \"BIM\" avec HTML, SASS, JavaScript, jQuery // Multi-pages and responsive web site \"BIM\" with HTML, SASS, JavaScript, jQuery",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./sass/style.scss:./css/style.css --style expanded"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RmNLcN06/Project_BIM.git"
+  },
+  "author": "Romain Luciano",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RmNLcN06/Project_BIM/issues"
+  },
+  "homepage": "https://github.com/RmNLcN06/Project_BIM#readme"
+}
