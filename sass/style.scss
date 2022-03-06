@@ -187,6 +187,7 @@
 
 /* Main Part */
 .main {
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -194,8 +195,9 @@
   background-color: var(--font-clr-two);
 
   &__container {
-    width: 80%;
+    width: 70%;
     display: flex;
+    justify-content: space-around;
 
     &__wrapper {
       width: 25%;
@@ -203,7 +205,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-around;
-      margin: 0px 20px;
+      padding: 0px 10px;
 
       &--icon {
         i {
@@ -246,19 +248,94 @@
       display: flex;
       justify-content: center;
       align-items: center;
+      width: 20%;
     }
 
     &__wrapper--icon:last-child i {
       background-color: var(--font-clr-two);
     }
   }
+}
 
-  &__container__two {
-    width: 100%;
-    background-image: linear-gradient(
-      to top right,
-      var(--clr-blue-two),
-      var(--clr-pink-one)
-    );
+.main__two {
+  width: 100%;
+  background-image: linear-gradient(
+    to top right,
+    var(--clr-blue-two),
+    var(--clr-pink-one)
+  );
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
+    &__left {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: 77.6%;
+
+      &__header {
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 30px;
+
+        &--title {
+          margin: 10px 0px;
+          font-weight: 400;
+        }
+      }
+
+      &__body {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        &--img {
+          width: 70%;
+        }
+
+        &--description {
+          width: 25%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+        }
+      }
+
+      .description--block--title {
+        margin-bottom: 20px;
+
+        span {
+          margin-left: 20px;
+        }
+      }
+    }
+
+    &__right {
+      background-color: var(--font-clr-three);
+      width: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      opacity: 0.5;
+
+      &--block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--number {
+          margin-bottom: 15px;
+        }
+      }
+    }
   }
 }
